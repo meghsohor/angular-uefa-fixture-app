@@ -1,0 +1,24 @@
+<h1>UEFA Champions League 2015 </h1>
+
+<table *ngIf="matches$ | async as matches">
+  <thead>
+    <tr>
+      <th>Match No.</th>
+      <th>Round</th>
+      <th>Team 1</th>
+      <th>Goals</th>
+      <th>Team 2</th>
+      <th>Goals</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let match of matches; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{match.round}}</td>
+      <td>{{match.team1}}</td>
+      <td>{{match.team1goals}}</td>
+      <td>{{match.team2}}</td>
+      <td>{{match.team2goals}}</td>
+    </tr>
+  </tbody>
+</table>
